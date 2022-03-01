@@ -26,3 +26,23 @@ input NewTodo {
 type Mutation {
   createTodo(input: NewTodo!): Todo!
 }
+
+type Movie {
+  id: ID!
+  title: String!
+  url: String!
+  releaseDate: String!
+}
+
+type GetAllMovies {
+  movies: [Movie!]!
+}
+
+input NewMovie {
+  title: String!
+  url: String!
+}
+
+type CreateMovie {
+  createMovie(input: NewMovie!): Movie!
+}
